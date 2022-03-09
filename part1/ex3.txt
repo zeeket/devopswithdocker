@@ -1,0 +1,22 @@
+baudel@rala~$  docker run -d --rm -it --name secretmessager devopsdockeruh/simple-web-service:ubuntu
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+56ad2006e442d6c583ae2aa107f4418ec7d55651a80699af7bddbd8aec78508d
+baudel@rala~$  docker exec -it secretmessager sh -c 'tail -f ./text.log'
+2022-03-09 17:40:09 +0000 UTC
+2022-03-09 17:40:11 +0000 UTC
+2022-03-09 17:40:13 +0000 UTC
+2022-03-09 17:40:15 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-03-09 17:40:17 +0000 UTC
+2022-03-09 17:40:19 +0000 UTC
+2022-03-09 17:40:21 +0000 UTC
+2022-03-09 17:40:23 +0000 UTC
+2022-03-09 17:40:25 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-03-09 17:40:27 +0000 UTC
+2022-03-09 17:40:29 +0000 UTC
+2022-03-09 17:40:31 +0000 UTC
+2022-03-09 17:40:33 +0000 UTC
+2022-03-09 17:40:35 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-03-09 17:40:37 +0000 UTC
