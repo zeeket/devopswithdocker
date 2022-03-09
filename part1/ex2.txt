@@ -1,0 +1,9 @@
+baudel@rala~/devopswithdocker/part1$ docker ps -as
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                          PORTS     NAMES              SIZE
+9930c29d615a   nginx     "/docker-entrypoint.…"   2 minutes ago   Up 2 minutes                    80/tcp    pedantic_hermann   1.09kB (virtual 134MB)
+349478f09da7   nginx     "/docker-entrypoint.…"   2 minutes ago   Exited (0) About a minute ago             laughing_leavitt   1.09kB (virtual 134MB)
+13307902e921   nginx     "/docker-entrypoint.…"   2 minutes ago   Exited (0) About a minute ago             trusting_jackson   1.09kB (virtual 134MB)
+baudel@rala~/devopswithdocker/part1$ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED      SIZE
+nginx        latest    9c1ff20ac9c9   8 days ago   134MB
+baudel@rala~/devopswithdocker/part1$ 
