@@ -1,0 +1,44 @@
+baudel@rala~/devopswithdocker/part1$  docker pull devopsdockeruh/simple-web-service:alpine && docker pull devopsdockeruh/simple-web-service:ubuntu
+alpine: Pulling from devopsdockeruh/simple-web-service
+ba3557a56b15: Pull complete 
+1dace236434b: Pull complete 
+4f4fb700ef54: Pull complete 
+Digest: sha256:dd4d367476f86b7d7579d3379fe446ae5dfce25480903fb0966fc2e5257e0543
+Status: Downloaded newer image for devopsdockeruh/simple-web-service:alpine
+docker.io/devopsdockeruh/simple-web-service:alpine
+ubuntu: Pulling from devopsdockeruh/simple-web-service
+5d3b2c2d21bb: Pull complete 
+3fc2062ea667: Pull complete 
+75adf526d75b: Pull complete 
+965d4bbb586a: Pull complete 
+4f4fb700ef54: Pull complete 
+Digest: sha256:d44e1dce398732e18c7c2bad9416a072f719af33498302b02929d4c112e88d2a
+Status: Downloaded newer image for devopsdockeruh/simple-web-service:ubuntu
+docker.io/devopsdockeruh/simple-web-service:ubuntu
+baudel@rala~/devopswithdocker/part1$  docker images
+REPOSITORY                          TAG       IMAGE ID       CREATED         SIZE
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   12 months ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   12 months ago   15.7MB
+baudel@rala~/devopswithdocker/part1$  docker run -d --rm -it --name secretmessager2 devopsdockeruh/simple-web-service:alpine
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+29003c311983f854cb90fb4614d65015fae5c5165b94f5460f834d4005dfc4ef
+baudel@rala~/devopswithdocker/part1$  docker exec -it secretmessager2 sh -c 'tail -f ./text.log'
+2022-03-11 07:18:34 +0000 UTC
+2022-03-11 07:18:36 +0000 UTC
+2022-03-11 07:18:38 +0000 UTC
+2022-03-11 07:18:40 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-03-11 07:18:42 +0000 UTC
+2022-03-11 07:18:44 +0000 UTC
+2022-03-11 07:18:46 +0000 UTC
+2022-03-11 07:18:48 +0000 UTC
+2022-03-11 07:18:50 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-03-11 07:18:52 +0000 UTC
+2022-03-11 07:18:54 +0000 UTC
+2022-03-11 07:18:56 +0000 UTC
+2022-03-11 07:18:58 +0000 UTC
+2022-03-11 07:19:00 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2022-03-11 07:19:02 +0000 UTC
+^Cbaudel@rala~/devopswithdocker/part1$  
